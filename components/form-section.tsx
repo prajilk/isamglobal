@@ -3,7 +3,7 @@
 import { Controller, useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
-import { ArrowRight, Phone, AtSign } from "lucide-react"
+import { ArrowRight, Phone, AtSign, Mail } from "lucide-react"
 
 import {
   Field,
@@ -13,16 +13,15 @@ import {
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import Link from "next/link"
 
 const formSchema = z.object({
   name: z.string().min(2, "Please enter your name."),
   email: z.email("Enter a valid email address."),
   company: z.string().min(1, "Please enter your company name."),
-  phone: z.string().min(6, "Please enter a valid phone number."),
+  phone: z.string().min(10, "Please enter a valid phone number."),
   // solution: z.string().min(1, "Please choose a solution."),
-  message: z
-    .string()
-    .min(10, "Tell us a little more about your business (10+ characters)."),
+  message: z.string().min(2, "Tell us a little more about your business."),
 })
 
 type ContactFormValues = z.infer<typeof formSchema>
@@ -81,7 +80,7 @@ export default function FormSection() {
           </div> */}
 
           <div className="mt-12 divide-y divide-white/10 border-t border-white/10">
-            <div className="flex items-center gap-4 py-5">
+            {/* <div className="flex items-center gap-4 py-5">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10">
                 <Phone className="h-4.5 w-4.5 text-white" strokeWidth={2} />
               </span>
@@ -93,17 +92,20 @@ export default function FormSection() {
                   +2 011 6114 5741
                 </p>
               </div>
-            </div>
+            </div> */}
 
             <div className="flex items-center gap-4 py-5">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10">
-                <AtSign className="h-4.5 w-4.5 text-white" strokeWidth={2} />
+                <Mail className="h-4.5 w-4.5 text-white" strokeWidth={2} />
               </span>
               <div>
                 <p className="text-sm text-white/50">How can we help you?!</p>
-                <p className="text-[15px] font-medium text-white">
-                  sales@isamglobal.com
-                </p>
+                <Link
+                  href="mailto:info@isamglobal.com"
+                  className="text-[15px] font-medium text-white"
+                >
+                  info@isamglobal.com
+                </Link>
               </div>
             </div>
           </div>
@@ -207,8 +209,16 @@ export default function FormSection() {
                       <Input
                         {...field}
                         id={field.name}
-                        type="tel"
-                        placeholder="Phone Number"
+                        onKeyDown={(e) => {
+                          // Prevent the decimal point key from registering
+                          if (e.key === "." || e.key === "," || e.key === "-") {
+                            e.preventDefault()
+                          }
+                        }}
+                        type="number"
+                        step={1}
+                        min={0}
+                        placeholder="00971xxxxxxx"
                         aria-invalid={fieldState.invalid}
                         autoComplete="tel"
                         className="h-11 rounded-md bg-transparent text-white placeholder:text-white/60 dark:bg-transparent"

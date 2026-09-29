@@ -182,8 +182,9 @@ export default function WhatWeDo() {
           </p>
 
           <ScrollButton
-            id="#solutions-section"
+            id="solutions-section"
             size="lg"
+            duration={3000}
             className="mt-8 h-auto! rounded-full py-2 pr-2 pl-6 text-[15px] font-medium"
           >
             Explore Our Capabilities

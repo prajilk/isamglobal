@@ -49,9 +49,10 @@ export default function WhoWeAreSection() {
           </p>
 
           <ScrollButton
-            id="#form-section"
+            id="form-section"
             className="mt-6 rounded-full"
             size="lg"
+            duration={4000}
           >
             Learn More
             <span className="flex items-center justify-center rounded-full bg-white p-1 text-primary">

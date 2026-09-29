@@ -31,15 +31,21 @@ export default function HeroSection() {
         </p>
 
         <div className="mt-8 flex items-center gap-4">
-          <ScrollButton id="#form-section" size="lg" className="rounded-full">
+          <ScrollButton
+            id="form-section"
+            size="lg"
+            className="rounded-full"
+            duration={5000}
+          >
             Get Started
             <span className="flex items-center justify-center rounded-full bg-white p-1 text-primary">
               <ArrowRight className="size-4" strokeWidth={2} />
             </span>
           </ScrollButton>
           <ScrollButton
-            id="#about-section"
+            id="about-section"
             size="lg"
+            duration={1000}
             className="rounded-full"
             variant="outline"
           >

@@ -6,6 +6,7 @@ import { useOutsideClick } from "@/hooks/use-outside-click"
 import Rocket from "./icons/rocket"
 import { TextAnimate } from "./ui/text-animate"
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 export default function OurSolutions() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -47,42 +48,43 @@ export default function OurSolutions() {
       </AnimatePresence>
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0 z-100 grid place-items-center">
-            <motion.button
-              key={`button-${active.title}-${id}`}
-              layout
-              initial={{
-                opacity: 0,
-              }}
-              animate={{
-                opacity: 1,
-              }}
-              exit={{
-                opacity: 0,
-                transition: {
-                  duration: 0.05,
-                },
-              }}
-              className="absolute top-2 right-2 flex h-6 w-6 items-center justify-center rounded-full bg-white lg:hidden"
-              onClick={() => setActive(null)}
-            >
-              <CloseIcon />
-            </motion.button>
+          <div className="fixed inset-0 z-100 grid place-items-center px-3 sm:px-0">
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="flex h-full w-full max-w-125 flex-col overflow-hidden bg-white sm:rounded-3xl md:h-fit md:max-h-[95%]"
+              className="relative flex h-fit w-full max-w-125 flex-col overflow-hidden rounded-3xl bg-white md:h-fit md:max-h-[95%]"
             >
+              {/* <motion.button
+                key={`button-${active.title}-${id}`}
+                layout
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+                exit={{
+                  opacity: 0,
+                  transition: {
+                    duration: 0.05,
+                  },
+                }}
+                className="absolute top-2 right-2 flex h-6 w-6 items-center justify-center rounded-full bg-white lg:hidden"
+                onClick={() => setActive(null)}
+              >
+                <CloseIcon />
+              </motion.button> */}
+
               <motion.div
                 layoutId={`image-${active.title}-${id}`}
                 className="shrink-0 p-4"
               >
-                <img
+                <Image
                   width={200}
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="h-80 w-full object-cover object-center sm:rounded-lg lg:h-52"
+                  className="h-56 w-full rounded-lg object-cover object-center sm:h-80 lg:h-52"
                 />
               </motion.div>
 
@@ -118,12 +120,12 @@ export default function OurSolutions() {
                   className="relative flex min-h-0 flex-1 flex-col px-4"
                 >
                   <ul
-                    className="flex h-full scroll-fade scrollbar-thin scrollbar-thumb-gray-300 flex-wrap gap-2 overflow-y-scroll scroll-fade-[20%]"
+                    className="flex scroll-fade scrollbar-thin scrollbar-thumb-gray-300 flex-wrap gap-2 overflow-y-scroll py-2 scroll-fade-[20%]"
                     data-lenis-prevent
                   >
                     {active.tags.map((solution) => (
                       <li
-                        className="rounded-full border border-black/40 px-3 py-1.5 text-sm text-black"
+                        className="h-fit rounded-full border border-black/40 px-3 py-1.5 text-sm text-black"
                         key={solution}
                       >
                         {solution}

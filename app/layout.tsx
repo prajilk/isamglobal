@@ -1,10 +1,8 @@
 import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google"
-
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 import Header from "@/components/layout/header"
-import SmoothScroll from "@/components/smooth-scroll"
 import Footer from "@/components/layout/footer"
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -34,13 +32,13 @@ export default function RootLayout({
       )}
     >
       <body className="font-dm-sans">
-        <SmoothScroll>
-          <ThemeProvider>
-            <Header />
-            {children}
-            <Footer />
-          </ThemeProvider>
-        </SmoothScroll>
+        {/* <SmoothScroll> */}
+        <ThemeProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
+        {/* </SmoothScroll> */}
       </body>
     </html>
   )
