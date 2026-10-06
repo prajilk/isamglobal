@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react"
 import { Button } from "./ui/button"
 import Briefcase from "./icons/briefcase"
 import { TextAnimate } from "./ui/text-animate"
-import ScrollButton from "./scroll-button"
+import Link from "next/link"
 
 export default function HeroSection() {
   return (
@@ -26,31 +26,26 @@ export default function HeroSection() {
         </TextAnimate>
 
         <p className="mt-6 max-w-md text-[15px] leading-relaxed text-[#5E5E5E]">
-          Bitelo empowers innovation through clean design, agile development,
-          and tech strategy.
+          ISAM Global is a UAE-based IT consulting and software solutions
+          company offering ready-to-deploy business applications for Property
+          Management, Facility management, Education, Healthcare, Industrial HSE
+          and other business operations.
         </p>
 
         <div className="mt-8 flex items-center gap-4">
-          <ScrollButton
-            id="form-section"
-            size="lg"
-            className="rounded-full"
-            duration={5000}
-          >
-            Get Started
-            <span className="flex items-center justify-center rounded-full bg-white p-1 text-primary">
-              <ArrowRight className="size-4" strokeWidth={2} />
-            </span>
-          </ScrollButton>
-          <ScrollButton
-            id="about-section"
-            size="lg"
-            duration={1000}
-            className="rounded-full"
-            variant="outline"
-          >
-            Learn More
-          </ScrollButton>
+          <Link href="#form-section">
+            <Button size="lg" className="rounded-full">
+              Book a Demo
+              <span className="flex items-center justify-center rounded-full bg-white p-1 text-primary">
+                <ArrowRight className="size-4" strokeWidth={2} />
+              </span>
+            </Button>
+          </Link>
+          <Link href="#about-section">
+            <Button size="lg" className="rounded-full" variant="outline">
+              Learn More
+            </Button>
+          </Link>
         </div>
       </div>
 

@@ -22,7 +22,7 @@ export default function OurServicesSection() {
 
         <p className="mt-4 max-w-md text-sm leading-relaxed text-gray-500">
           Our integrated platform accelerates timelines without sacrificing
-          quality or control. Codexa unifies every step of your workflow.
+          quality or control. ISAM Global unifies every step of your workflow.
         </p>
       </div>
 
@@ -96,8 +96,8 @@ export default function OurServicesSection() {
               Flexible API Integration
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-gray-500">
-              Easily connect Codexa to your existing tools and services. Our
-              APIs are built for speed, security, and scalability.
+              Easily connect our services to your existing tools and services.
+              Our APIs are built for speed, security, and scalability.
             </p>
 
             <div className="relative mt-5 flex h-60 items-center justify-center overflow-hidden rounded-3xl bg-[#F7F9FC] py-10 md:h-auto">

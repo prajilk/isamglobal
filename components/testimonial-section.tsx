@@ -29,7 +29,7 @@ const testimonials: Testimonial[] = [
     name: "Amira Leana",
     role: "Co-Founder, FlowTech",
     quote:
-      "Codexa helped us launch faster than we imagined. We automated half our workflows in the first week and saved dozens of hours.",
+      "ISAM Global helped us launch faster than we imagined. We automated half our workflows in the first week and saved dozens of hours.",
     avatar: "/testimonial-amira.jpg",
   },
   {

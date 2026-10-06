@@ -1,4 +1,4 @@
-import { ArrowRight, Dot } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import Facebook from "../icons/facebook"
 import Linkedin from "../icons/linkedin"
 import Instagram from "../icons/instagram"
@@ -8,18 +8,23 @@ import Image from "next/image"
 
 interface LinkColumn {
   title: string
-  links: { label: string; href: string; active?: boolean }[]
+  links: {
+    label: string
+    href: string
+    scrollDuration?: number
+    active?: boolean
+  }[]
 }
 
 const columns: LinkColumn[] = [
   {
-    title: "About",
+    title: "Quick Links",
     links: [
-      { label: "About Us", href: "#" },
-      { label: "Leadership Team", href: "#" },
-      { label: "Case Studies", href: "#" },
-      { label: "Contact Us", href: "#" },
-      { label: "Careers", href: "#" },
+      { label: "Home", href: "#hero-section" },
+      { label: "Solutions", href: "#solutions-section" },
+      { label: "About", href: "#about-section" },
+      { label: "Why ISAM", href: "#commitment-section" },
+      { label: "Book a Demo", href: "#form-section" },
     ],
   },
   {
@@ -69,8 +74,7 @@ export default function Footer() {
               </p>
 
               <div className="mt-5 space-y-1 text-sm text-white/80">
-                <p>sales@isamglobal.com</p>
-                <p>+2 011 6114 5741</p>
+                <p>info@isamglobal.com</p>
               </div>
             </div>
 
@@ -81,9 +85,26 @@ export default function Footer() {
                   {column.title}
                 </h4>
                 <ul className="mt-4 space-y-3">
-                  {column.links.map((link) => (
-                    <li key={link.label}>
-                      <a
+                  {column.links.map((link) =>
+                    column.title === "Quick Links" ? (
+                      <li key={link.label}>
+                        <Link
+                          href={link.href}
+                          className={`inline-flex items-center gap-1.5 text-sm font-medium transition-colors ${
+                            link.active
+                              ? "text-white"
+                              : "text-white/70 hover:text-white"
+                          }`}
+                        >
+                          {link.active && (
+                            <ArrowRight
+                              className="h-3.5 w-3.5"
+                              strokeWidth={2.5}
+                            />
+                          )}
+                          {link.label}
+                        </Link>
+                        {/* <a
                         href={link.href}
                         className={`inline-flex items-center gap-1.5 text-sm font-medium transition-colors ${
                           link.active
@@ -98,9 +119,29 @@ export default function Footer() {
                           />
                         )}
                         {link.label}
-                      </a>
-                    </li>
-                  ))}
+                      </a> */}
+                      </li>
+                    ) : (
+                      <li key={link.label}>
+                        <a
+                          href={link.href}
+                          className={`inline-flex items-center gap-1.5 text-sm font-medium transition-colors ${
+                            link.active
+                              ? "text-white"
+                              : "text-white/70 hover:text-white"
+                          }`}
+                        >
+                          {link.active && (
+                            <ArrowRight
+                              className="h-3.5 w-3.5"
+                              strokeWidth={2.5}
+                            />
+                          )}
+                          {link.label}
+                        </a>
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
             ))}

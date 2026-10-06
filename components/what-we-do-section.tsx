@@ -8,12 +8,10 @@ import {
   AccordionContent,
   AccordionItem,
 } from "./ui/accordion"
-import Image from "next/image"
 import AvatarAura from "./icons/avatar-aura"
+import { TextAnimate } from "./ui/text-animate"
 import Link from "next/link"
 import { Button } from "./ui/button"
-import { TextAnimate } from "./ui/text-animate"
-import ScrollButton from "./scroll-button"
 
 interface Capability {
   number: string
@@ -35,35 +33,27 @@ const filterGroups: FilterGroup[] = [
         number: "01.",
         title: "Business Software Development",
         description:
-          "Validate faster with drag-and-drop flows, auto-generated wireframes, and built-in feedback loops. No dev team required.",
+          "Ready-to-deploy applications for specific business requirements.",
         image: "/img1.webp",
       },
       {
         number: "02.",
-        title: "SaaS & Cloud Solutions",
+        title: "IT Consultation",
         description:
-          "Scale on secure, multi-tenant cloud infrastructure with elastic pricing and zero-downtime deployments built in.",
+          "Technology guidance and solution selection for organizations.",
         image: "/img1.webp",
       },
       {
         number: "03.",
-        title: "Custom Software Solutions",
-        description:
-          "Purpose-built platforms tailored to your exact workflows, integrations, and industry requirements.",
+        title: "Software Implementation",
+        description: "Configuration, deployment, training and onboarding.",
         image: "/img1.webp",
       },
       {
         number: "04.",
-        title: "Business Process Digitization",
+        title: "Digital Business Solutions",
         description:
-          "Replace manual, paper-based workflows with connected digital processes that reduce errors and save time.",
-        image: "/img1.webp",
-      },
-      {
-        number: "05.",
-        title: "Digital Transformation",
-        description:
-          "End-to-end strategy and execution to modernize legacy systems and align technology with business goals.",
+          "Helping organizations replace manual processes with connected digital workflows.",
         image: "/img1.webp",
       },
     ],
@@ -128,7 +118,7 @@ const filterGroups: FilterGroup[] = [
 ]
 
 export default function WhatWeDo() {
-  const [activeFilter, setActiveFilter] = useState(filterGroups[0].label)
+  const [activeFilter] = useState(filterGroups[0].label)
 
   const activeCapabilities =
     filterGroups.find((group) => group.label === activeFilter)?.capabilities ??
@@ -159,12 +149,12 @@ export default function WhatWeDo() {
           </div>
 
           <p className="mt-6 text-[15px] leading-relaxed text-gray-500">
-            We provide ready-to-implement and custom software solutions that
-            simplify operations, improve customer experiences and accelerate
-            digital growth.
+            ISAM Global connects businesses with practical, ready-to-deploy
+            software solutions and technology services designed to simplify
+            operations and improve business performance.
           </p>
 
-          <p className="mt-4 text-[15px] leading-relaxed text-gray-500">
+          {/* <p className="mt-4 text-[15px] leading-relaxed text-gray-500">
             From business software development and SaaS platforms to enterprise
             management systems, process digitization and digital transformation,
             we build technology around the real challenges businesses face.
@@ -179,25 +169,25 @@ export default function WhatWeDo() {
           <p className="mt-4 text-[15px] leading-relaxed text-gray-500">
             Understand the problem. Build the right solution. Deliver measurable
             value.
-          </p>
+          </p> */}
 
-          <ScrollButton
-            id="solutions-section"
-            size="lg"
-            duration={3000}
-            className="mt-8 h-auto! rounded-full py-2 pr-2 pl-6 text-[15px] font-medium"
-          >
-            Explore Our Capabilities
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-primary">
-              <ArrowRight className="h-4 w-4" strokeWidth={2} />
-            </span>
-          </ScrollButton>
+          <Link href="#solutions-section">
+            <Button
+              size="lg"
+              className="mt-8 h-auto! rounded-full py-2 pr-2 pl-6 text-[15px] font-medium"
+            >
+              Explore Our Capabilities
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-primary">
+                <ArrowRight className="h-4 w-4" strokeWidth={2} />
+              </span>
+            </Button>
+          </Link>
         </div>
 
         {/* Right column — filters + accordion */}
         <div>
           {/* Filter pills */}
-          <div className="flex flex-wrap gap-2">
+          {/* <div className="flex flex-wrap gap-2">
             {filterGroups.map((group) => {
               const isActive = group.label === activeFilter
               return (
@@ -216,7 +206,7 @@ export default function WhatWeDo() {
                 </button>
               )
             })}
-          </div>
+          </div> */}
 
           {/* Capabilities accordion — remounts on filter change so item-0
               of the new list opens by default */}
@@ -250,7 +240,7 @@ export default function WhatWeDo() {
                       <p className="max-w-md text-[15px] leading-relaxed text-gray-500">
                         {item.description}
                       </p>
-                      {item.image && (
+                      {/* {item.image && (
                         <div className="mt-6 aspect-video overflow-hidden rounded-2xl">
                           <Image
                             src={item.image}
@@ -260,7 +250,7 @@ export default function WhatWeDo() {
                             height={300}
                           />
                         </div>
-                      )}
+                      )} */}
                     </div>
                   </AccordionContent>
                 )}

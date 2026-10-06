@@ -11,6 +11,7 @@ export default function ScrollButton({
   className,
   variant,
   duration = 2000,
+  asChild = false,
 }: {
   id: string
   children: ReactNode
@@ -34,6 +35,7 @@ export default function ScrollButton({
     | "destructive"
     | "link"
     | null
+  asChild?: boolean
 }) {
   // const lenis = useLenis()
 
@@ -78,7 +80,11 @@ export default function ScrollButton({
     requestAnimationFrame(animation)
   }
 
-  return (
+  return asChild ? (
+    <button onClick={handleScroll} className={className}>
+      {children}
+    </button>
+  ) : (
     <Button
       variant={variant}
       size={size}

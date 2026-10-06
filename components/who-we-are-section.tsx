@@ -2,7 +2,8 @@ import { Star, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import UserLink from "./icons/user-link"
 import { TextAnimate } from "./ui/text-animate"
-import ScrollButton from "./scroll-button"
+import { Button } from "./ui/button"
+import Link from "next/link"
 
 export default function WhoWeAreSection() {
   return (
@@ -17,48 +18,39 @@ export default function WhoWeAreSection() {
 
           <div className="mt-3 font-jakarta-sans text-4xl leading-[110%] font-bold text-[#2B2B2B] sm:text-5xl">
             <TextAnimate animation="blurIn" as="span">
-              Your Partners in
+              Technology that makes
             </TextAnimate>
             <br />
             <TextAnimate animation="blurIn" as="span" className="text-primary">
-              Digital Growth
+              business simpler.
             </TextAnimate>
           </div>
 
           <p className="mt-6 text-[15px] leading-relaxed text-gray-500">
-            At ISAM GLOBAL, we believe technology should make business simpler,
-            smarter and more efficient.
+            ISAM Global is a UAE-based IT consulting and software solutions
+            company providing practical, ready-to-deploy business applications
+            for organizations across the UAE, GCC and emerging markets.
           </p>
 
           <p className="mt-2 text-[15px] leading-relaxed text-gray-500">
-            We provide ready-to-implement software solutions across Property
-            Management, FMC, HSE, Logistics, HR, Education, Beauty &amp;
-            Wellness, Healthcare and more helping organizations simplify
-            operations and build connected businesses.
+            Our solutions cover Property Management, Facility Management,
+            Education, Healthcare, Beauty & Wellness, HSE, HR, logistics and
+            other business operations.
           </p>
 
           <p className="mt-2 text-[15px] leading-relaxed text-gray-500">
-            Understand the problem. Build the right solution. Deliver measurable
-            value.
+            We focus on one simple principle: understand the business problem,
+            recommend the right technology, and deliver measurable value.
           </p>
 
-          <p className="mt-2 text-[15px] leading-relaxed text-gray-500">
-            Our goal is to reduce manual work, improve operational visibility
-            and help organizations make better decisions through connected
-            digital platforms.
-          </p>
-
-          <ScrollButton
-            id="form-section"
-            className="mt-6 rounded-full"
-            size="lg"
-            duration={4000}
-          >
-            Learn More
-            <span className="flex items-center justify-center rounded-full bg-white p-1 text-primary">
-              <ArrowRight className="h-4 w-4" strokeWidth={2} />
-            </span>
-          </ScrollButton>
+          <Link href="#form-section">
+            <Button className="mt-6 rounded-full" size="lg">
+              Learn More
+              <span className="flex items-center justify-center rounded-full bg-white p-1 text-primary">
+                <ArrowRight className="h-4 w-4" strokeWidth={2} />
+              </span>
+            </Button>
+          </Link>
         </div>
 
         {/* Right column — image collage */}

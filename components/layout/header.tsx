@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import ScrollButton from "../scroll-button"
+import { Button } from "../ui/button"
 
 export default function Header() {
   return (
@@ -20,48 +20,41 @@ export default function Header() {
 
         {/* Nav links */}
         <div className="hidden items-center gap-9 md:flex">
-          <ScrollButton
-            id="hero-section"
+          <Link
+            href="#hero-section"
             className="cursor-pointer bg-transparent text-[15px] text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
-            duration={2000}
           >
             Home
-          </ScrollButton>
-          <ScrollButton
-            id="about-section"
+          </Link>
+          <Link
+            href="#about-section"
             className="cursor-pointer bg-transparent text-[15px] text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
-            duration={1000}
           >
             About
-          </ScrollButton>
-          <ScrollButton
-            id="solutions-section"
+          </Link>
+          <Link
+            href="#solutions-section"
             className="cursor-pointer bg-transparent text-[15px] text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
-            duration={3000}
           >
             Services
-          </ScrollButton>
-          <ScrollButton
-            id="form-section"
+          </Link>
+          <Link
+            href="#form-section"
             className="cursor-pointer bg-transparent text-[15px] text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
-            duration={5000}
           >
             Contact
-          </ScrollButton>
+          </Link>
         </div>
 
         {/* CTA button */}
-        <ScrollButton
-          id="form-section"
-          className="rounded-full"
-          size="lg"
-          duration={4000}
-        >
-          Get Started
-          <span className="flex items-center justify-center rounded-full bg-white p-1 text-primary">
-            <ArrowRight className="h-4 w-4" strokeWidth={2} />
-          </span>
-        </ScrollButton>
+        <Link href="#form-section">
+          <Button className="rounded-full" size="lg">
+            Book a Demo
+            <span className="flex items-center justify-center rounded-full bg-white p-1 text-primary">
+              <ArrowRight className="h-4 w-4" strokeWidth={2} />
+            </span>
+          </Button>
+        </Link>
       </nav>
     </header>
   )

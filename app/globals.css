@@ -106,6 +106,10 @@
   display: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html.lenis,
 html.lenis body {
   height: auto;

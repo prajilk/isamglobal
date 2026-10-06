@@ -20,7 +20,7 @@ export default function Page() {
       <OurServicesSection />
       {/* <TestimonialSection /> */}
       <FormSection />
-      <FaqSection />
+      {/* <FaqSection /> */}
     </main>
   )
 }

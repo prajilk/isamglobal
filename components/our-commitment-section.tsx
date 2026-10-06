@@ -78,7 +78,10 @@ export default function OurCommitmentSection() {
   const [activeId, setActiveId] = useState(commitments[0].id)
 
   return (
-    <section className="container-padding-x container py-10 md:py-16">
+    <section
+      id="commitment-section"
+      className="container-padding-x container py-10 md:py-16"
+    >
       <div className="rounded-[32px] bg-gray-50 p-5 sm:p-12">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left column — copy + image */}

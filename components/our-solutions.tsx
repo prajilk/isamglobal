@@ -7,13 +7,18 @@ import Rocket from "./icons/rocket"
 import { TextAnimate } from "./ui/text-animate"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
+import { Button } from "./ui/button"
 
 export default function OurSolutions() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
     null
   )
+  const [showAll, setShowAll] = useState(false)
+
   const id = useId()
   const ref = useRef<HTMLDivElement>(null)
+
+  const visibleCards = showAll ? cards : cards.slice(0, 4)
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -157,7 +162,7 @@ export default function OurSolutions() {
       </AnimatePresence>
       <section
         id="solutions-section"
-        className="container-padding-x container py-12 md:py-16"
+        className="container-padding-x container pt-12 pb-5 md:pt-16 md:pb-0"
       >
         <div className="mb-10 flex flex-col items-center text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-gray-100 px-4 py-1.5 text-sm text-primary">
@@ -169,53 +174,72 @@ export default function OurSolutions() {
             as="h2"
             className="mt-4 font-jakarta-sans text-4xl font-bold text-[#2B2B2B] sm:text-5xl"
           >
-            Our Solutions
+            Our Software Solutions
           </TextAnimate>
         </div>
         <ul className="grid w-full grid-cols-1 items-start gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {cards.map((card) => (
-            <motion.div
-              layoutId={`card-${card.title}-${id}`}
-              key={card.title}
-              onClick={() => setActive(card)}
-              className="flex cursor-pointer flex-col rounded-xl border border-transparent p-4 hover:border-neutral-100 hover:shadow-xl"
-            >
-              <div className="flex w-full flex-col gap-4">
-                <motion.div layoutId={`image-${card.title}-${id}`}>
-                  <img
-                    width={100}
-                    height={100}
-                    src={card.src}
-                    alt={card.title}
-                    className="h-52 w-full rounded-lg object-cover object-center"
-                  />
-                </motion.div>
-                <div className="flex flex-col justify-center gap-1">
-                  <motion.h3
-                    layoutId={`title-${card.title}-${id}`}
-                    className="font-dm-sans text-xl font-medium"
-                  >
-                    {card.title}
-                  </motion.h3>
-                  <motion.p
-                    layoutId={`description-${card.subHeading}-${id}`}
-                    className="font-dm-sans font-semibold text-neutral-600"
-                  >
-                    {card.subHeading}
-                  </motion.p>
-                  <motion.p
-                    layoutId={`description-${card.description}-${id}`}
-                    className="font-dm-sans text-sm"
-                  >
-                    {card.description}
-                  </motion.p>
-                </div>
-              </div>
-            </motion.div>
+          {visibleCards.map((card) => (
+            <Card key={card.title} card={card} id={id} setActive={setActive} />
           ))}
+          <div className="mt-5 flex justify-center md:col-span-2 lg:col-span-3">
+            <Button size="lg" onClick={() => setShowAll((prev) => !prev)}>
+              {showAll ? "View less" : "More Business Solutions"}
+            </Button>
+          </div>
         </ul>
       </section>
     </>
+  )
+}
+
+function Card({
+  card,
+  id,
+  setActive,
+}: {
+  card: (typeof cards)[0]
+  id: string
+  setActive: (card: (typeof cards)[0]) => void
+}) {
+  return (
+    <motion.div
+      layoutId={`card-${card.title}-${id}`}
+      key={card.title}
+      onClick={() => setActive(card)}
+      className="flex cursor-pointer flex-col rounded-xl border border-transparent p-4 hover:border-neutral-100 hover:shadow-xl"
+    >
+      <div className="flex w-full flex-col gap-4">
+        <motion.div layoutId={`image-${card.title}-${id}`}>
+          <img
+            width={100}
+            height={100}
+            src={card.src}
+            alt={card.title}
+            className="h-52 w-full rounded-lg object-cover object-center"
+          />
+        </motion.div>
+        <div className="flex flex-col justify-center gap-1">
+          <motion.h3
+            layoutId={`title-${card.title}-${id}`}
+            className="font-dm-sans text-xl font-medium"
+          >
+            {card.title}
+          </motion.h3>
+          <motion.p
+            layoutId={`description-${card.subHeading}-${id}`}
+            className="font-dm-sans font-semibold text-neutral-600"
+          >
+            {card.subHeading}
+          </motion.p>
+          <motion.p
+            layoutId={`description-${card.description}-${id}`}
+            className="font-dm-sans text-sm"
+          >
+            {card.description}
+          </motion.p>
+        </div>
+      </div>
+    </motion.div>
   )
 }
 
@@ -284,16 +308,16 @@ const cards = [
     link: "#",
   },
   {
-    title: "MEETADR",
-    subHeading: "Healthcare & Doctor Appointment System",
+    title: "PETROHSE",
+    subHeading: "Health, Safety & Environment Management System",
     description:
-      "A connected healthcare platform that simplifies doctor discovery, appointment scheduling and patient management.",
-    src: "/services/meetadr.webp",
+      "A centralized platform for managing workplace safety, compliance, incidents and HSE operations across organizations.",
+    src: "/services/petrohse.webp",
     tags: [
-      "Doctor Management",
-      "Appointments",
-      "Patient Management",
-      "Schedules",
+      "Safety Management",
+      "Incident Tracking",
+      "Risk Assessment",
+      "Compliance",
       "Reports",
     ],
     link: "#",
@@ -314,16 +338,16 @@ const cards = [
     link: "#",
   },
   {
-    title: "PETROHSE",
-    subHeading: "Health, Safety & Environment Management System",
+    title: "MEETADR",
+    subHeading: "Healthcare & Doctor Appointment System",
     description:
-      "A centralized platform for managing workplace safety, compliance, incidents and HSE operations across organizations.",
-    src: "/services/petrohse.webp",
+      "A connected healthcare platform that simplifies doctor discovery, appointment scheduling and patient management.",
+    src: "/services/meetadr.webp",
     tags: [
-      "Safety Management",
-      "Incident Tracking",
-      "Risk Assessment",
-      "Compliance",
+      "Doctor Management",
+      "Appointments",
+      "Patient Management",
+      "Schedules",
       "Reports",
     ],
     link: "#",
