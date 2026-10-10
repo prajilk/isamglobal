@@ -38,6 +38,14 @@ const columns: LinkColumn[] = [
       { label: "Neural Network", href: "#" },
     ],
   },
+  {
+    title: "Legal Information",
+    links: [
+      { label: "Terms & Conditions", href: "#" },
+      { label: "Privacy Policy", href: "#" },
+      { label: "Cookie Policy", href: "#" },
+    ],
+  },
 ]
 
 const socials = [
@@ -49,7 +57,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="container-padding-x container py-8">
+    <footer className="px-3 py-8 md:px-5">
       <div
         className="relative overflow-hidden rounded-[32px] bg-[#0f3d33] bg-cover bg-bottom"
         style={{
