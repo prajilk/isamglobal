@@ -177,11 +177,11 @@ export default function OurSolutions() {
             Our Software Solutions
           </TextAnimate>
         </div>
-        <ul className="grid w-full grid-cols-1 items-start gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid w-full grid-cols-1 items-start gap-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-0">
           {visibleCards.map((card) => (
             <Card key={card.title} card={card} id={id} setActive={setActive} />
           ))}
-          <div className="mt-5 flex justify-center md:col-span-2 lg:col-span-3">
+          <div className="mt-5 flex justify-center md:col-span-2 lg:col-span-4">
             <Button size="lg" onClick={() => setShowAll((prev) => !prev)}>
               {showAll ? "View less" : "More Business Solutions"}
             </Button>
@@ -206,34 +206,34 @@ function Card({
       layoutId={`card-${card.title}-${id}`}
       key={card.title}
       onClick={() => setActive(card)}
-      className="flex cursor-pointer flex-col rounded-xl border border-transparent p-4 hover:border-neutral-100 hover:shadow-xl"
+      className="flex h-full cursor-pointer flex-col rounded-xl border border-transparent p-4 hover:border-neutral-100 hover:shadow-xl"
     >
       <div className="flex w-full flex-col gap-4">
         <motion.div layoutId={`image-${card.title}-${id}`}>
-          <img
-            width={100}
-            height={100}
+          <Image
+            width={200}
+            height={200}
             src={card.src}
             alt={card.title}
-            className="h-52 w-full rounded-lg object-cover object-center"
+            className="h-40 w-full rounded-lg object-cover object-center"
           />
         </motion.div>
         <div className="flex flex-col justify-center gap-1">
           <motion.h3
             layoutId={`title-${card.title}-${id}`}
-            className="font-dm-sans text-xl font-medium"
+            className="font-dm-sans font-medium"
           >
             {card.title}
           </motion.h3>
           <motion.p
             layoutId={`description-${card.subHeading}-${id}`}
-            className="font-dm-sans font-semibold text-neutral-600"
+            className="font-dm-sans text-sm font-semibold text-neutral-600"
           >
             {card.subHeading}
           </motion.p>
           <motion.p
             layoutId={`description-${card.description}-${id}`}
-            className="font-dm-sans text-sm"
+            className="font-dm-sans text-[13px]"
           >
             {card.description}
           </motion.p>
@@ -308,16 +308,16 @@ const cards = [
     link: "#",
   },
   {
-    title: "PETROHSE",
-    subHeading: "Health, Safety & Environment Management System",
+    title: "MEETADR",
+    subHeading: "Healthcare & Doctor Appointment System",
     description:
-      "A centralized platform for managing workplace safety, compliance, incidents and HSE operations across organizations.",
-    src: "/services/petrohse.webp",
+      "A connected healthcare platform that simplifies doctor discovery, appointment scheduling and patient management.",
+    src: "/services/meetadr.webp",
     tags: [
-      "Safety Management",
-      "Incident Tracking",
-      "Risk Assessment",
-      "Compliance",
+      "Doctor Management",
+      "Appointments",
+      "Patient Management",
+      "Schedules",
       "Reports",
     ],
     link: "#",
@@ -338,16 +338,16 @@ const cards = [
     link: "#",
   },
   {
-    title: "MEETADR",
-    subHeading: "Healthcare & Doctor Appointment System",
+    title: "PETROHSE",
+    subHeading: "Health, Safety & Environment Management System",
     description:
-      "A connected healthcare platform that simplifies doctor discovery, appointment scheduling and patient management.",
-    src: "/services/meetadr.webp",
+      "A centralized platform for managing workplace safety, compliance, incidents and HSE operations across organizations.",
+    src: "/services/petrohse.webp",
     tags: [
-      "Doctor Management",
-      "Appointments",
-      "Patient Management",
-      "Schedules",
+      "Safety Management",
+      "Incident Tracking",
+      "Risk Assessment",
+      "Compliance",
       "Reports",
     ],
     link: "#",

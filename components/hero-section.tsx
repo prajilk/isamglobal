@@ -9,7 +9,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero-section"
-      className="container-padding-x container grid grid-cols-1 items-center px-6 pt-12 md:pt-16 lg:grid-cols-2 lg:px-10"
+      className="container-padding-x container grid grid-cols-1 items-center px-6 pt-12 md:pt-0 lg:grid-cols-2 lg:px-10"
     >
       {/* Left column */}
       <div>
@@ -28,20 +28,19 @@ export default function HeroSection() {
 
         <p className="mt-6 max-w-md text-[15px] leading-relaxed text-[#5E5E5E]">
           ISAM Global is a UAE-based IT consulting and software solutions
-          company offering ready-to-deploy business applications for Property
-          Management, Facility management, Education, Healthcare, Industrial HSE
-          and other business operations.
+          company offering Ready-to-Deploy Software Solutions for Smarter
+          Business Operations.
         </p>
 
         <div className="mt-8 flex items-center gap-4">
-          <Link href="#form-section">
+          {/* <Link href="#form-section">
             <Button size="lg" className="rounded-full">
               Book a Demo
               <span className="flex items-center justify-center rounded-full bg-white p-1 text-primary">
                 <ArrowRight className="size-4" strokeWidth={2} />
               </span>
             </Button>
-          </Link>
+          </Link> */}
           <Link href="#about-section">
             <Button size="lg" className="rounded-full" variant="outline">
               Learn More

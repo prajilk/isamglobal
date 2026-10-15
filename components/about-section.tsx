@@ -1,13 +1,13 @@
-import { Monitor, Laptop } from "lucide-react"
+// import { Monitor, Laptop } from "lucide-react"
 import Avatar from "./icons/avatar"
-import { NumberTicker } from "./ui/number-ticker"
+// import { NumberTicker } from "./ui/number-ticker"
 
-const stats = [
-  { value: 32, decimalPlaces: 0, suffix: "+", label: "Years Of Experience" },
-  { value: 140, decimalPlaces: 0, suffix: "+", label: "Professional Staff" },
-  { value: 1.2, decimalPlaces: 1, suffix: "K+", label: "Yearly Customer" },
-  { value: 99.5, decimalPlaces: 1, suffix: "%", label: "Positive Reviews" },
-]
+// const stats = [
+//   { value: 32, decimalPlaces: 0, suffix: "+", label: "Years Of Experience" },
+//   { value: 140, decimalPlaces: 0, suffix: "+", label: "Professional Staff" },
+//   { value: 1.2, decimalPlaces: 1, suffix: "K+", label: "Yearly Customer" },
+//   { value: 99.5, decimalPlaces: 1, suffix: "%", label: "Positive Reviews" },
+// ]
 
 export default function AboutSection() {
   return (
@@ -49,7 +49,7 @@ export default function AboutSection() {
       </div>
 
       {/* Stats */}
-      <div className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-4">
+      {/* <div className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-4">
         {stats.map((stat) => (
           <div
             key={stat.label}
@@ -65,7 +65,7 @@ export default function AboutSection() {
             <p className="mt-3 text-[15px] text-gray-600">{stat.label}</p>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   )
 }

@@ -19,37 +19,37 @@ export default function Header() {
         </Link>
 
         {/* Nav links */}
-        <div className="hidden items-center gap-9 md:flex">
+        <div className="hidden items-center gap-9 font-semibold md:flex">
           <Link
             href="#hero-section"
-            className="cursor-pointer bg-transparent text-[15px] text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
+            className="cursor-pointer bg-transparent text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
           >
             Home
           </Link>
           <Link
             href="#about-section"
-            className="cursor-pointer bg-transparent text-[15px] text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
+            className="cursor-pointer bg-transparent text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
           >
             About
           </Link>
           <Link
             href="#solutions-section"
-            className="cursor-pointer bg-transparent text-[15px] text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
+            className="cursor-pointer bg-transparent text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
           >
             Services
           </Link>
           <Link
             href="#form-section"
-            className="cursor-pointer bg-transparent text-[15px] text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
+            className="cursor-pointer bg-transparent text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
           >
             Contact
           </Link>
         </div>
 
         {/* CTA button */}
-        <Link href="#form-section">
-          <Button className="rounded-full" size="lg">
-            Book a Demo
+        <Link href="#what-we-do">
+          <Button className="rounded-full font-semibold" size="lg">
+            What We do
             <span className="flex items-center justify-center rounded-full bg-white p-1 text-primary">
               <ArrowRight className="h-4 w-4" strokeWidth={2} />
             </span>

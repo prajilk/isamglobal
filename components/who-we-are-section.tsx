@@ -26,13 +26,13 @@ export default function WhoWeAreSection() {
             </TextAnimate>
           </div>
 
-          <p className="mt-6 text-[15px] leading-relaxed text-gray-500">
+          {/* <p className="mt-6 text-[15px] leading-relaxed text-gray-500">
             ISAM Global is a UAE-based IT consulting and software solutions
             company providing practical, ready-to-deploy business applications
             for organizations across the UAE, GCC and emerging markets.
-          </p>
+          </p> */}
 
-          <p className="mt-2 text-[15px] leading-relaxed text-gray-500">
+          <p className="mt-6 text-[15px] leading-relaxed text-gray-500">
             Our solutions cover Property Management, Facility Management,
             Education, Healthcare, Beauty & Wellness, HSE, HR, logistics and
             other business operations.

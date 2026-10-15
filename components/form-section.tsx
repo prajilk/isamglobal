@@ -46,9 +46,9 @@ export default function FormSection() {
 
   return (
     <section className="bg-[#141414] py-10 md:py-16" id="form-section">
-      <div className="container-padding-x container grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-10">
+      <div className="container-padding-x container grid grid-cols-1">
         {/* Left column — copy */}
-        <div>
+        {/* <div>
           <p className="text-sm text-[#F9F9F9]">
             We&apos;re here to answer all your questions
           </p>
@@ -61,9 +61,9 @@ export default function FormSection() {
             Artificial Intelligence refers to the development of computer
             systems that possess the ability to perform activities typically
             requiring human intelligence abilities!
-          </p>
+          </p> */}
 
-          {/* <div className="mt-8 flex items-center gap-4">
+        {/* <div className="mt-8 flex items-center gap-4">
             <Link
               href="#"
               className="flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-gray-900 transition-colors hover:bg-gray-100"
@@ -79,8 +79,8 @@ export default function FormSection() {
             </a>
           </div> */}
 
-          <div className="mt-12 divide-y divide-white/10 border-t border-white/10">
-            {/* <div className="flex items-center gap-4 py-5">
+        {/* <div className="mt-12 divide-y divide-white/10 border-t border-white/10"> */}
+        {/* <div className="flex items-center gap-4 py-5">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10">
                 <Phone className="h-4.5 w-4.5 text-white" strokeWidth={2} />
               </span>
@@ -94,7 +94,7 @@ export default function FormSection() {
               </div>
             </div> */}
 
-            <div className="flex items-center gap-4 py-5">
+        {/* <div className="flex items-center gap-4 py-5">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10">
                 <Mail className="h-4.5 w-4.5 text-white" strokeWidth={2} />
               </span>
@@ -109,10 +109,10 @@ export default function FormSection() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Right column — form card */}
-        <div className="rounded-2xl border border-white/10 bg-linear-to-tl from-[#1b1a1a] to-[#454344] p-8 backdrop-blur-3xl">
+        <div className="mx-auto max-w-xl rounded-2xl border border-white/10 bg-linear-to-tl from-[#1b1a1a] to-[#454344] p-8 backdrop-blur-3xl">
           <h3 className="text-xl font-semibold text-white">Get in touch</h3>
           <p className="mt-2 text-sm leading-relaxed text-[#F9F9F9]">
             Just fill out the form and our global experts will be in touch right
@@ -303,7 +303,7 @@ export default function FormSection() {
                 disabled={form.formState.isSubmitting}
                 className="flex w-full items-center justify-center gap-2 rounded-md bg-primary py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#4d6952] disabled:cursor-not-allowed disabled:opacity-60"
               >
-                Submit Request
+                Submit
                 <ArrowRight className="h-4 w-4" />
               </button>
             </FieldGroup>

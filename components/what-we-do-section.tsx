@@ -31,27 +31,34 @@ const filterGroups: FilterGroup[] = [
     capabilities: [
       {
         number: "01.",
-        title: "Business Software Development",
+        title: "IT Consulting and Software Advisory",
         description:
           "Ready-to-deploy applications for specific business requirements.",
         image: "/img1.webp",
       },
       {
         number: "02.",
-        title: "IT Consultation",
+        title: "Software Marketing and Distribution",
         description:
           "Technology guidance and solution selection for organizations.",
         image: "/img1.webp",
       },
       {
         number: "03.",
-        title: "Software Implementation",
+        title: "Software Implementation and Deployment",
         description: "Configuration, deployment, training and onboarding.",
         image: "/img1.webp",
       },
       {
         number: "04.",
-        title: "Digital Business Solutions",
+        title: "Business Process Digitization",
+        description:
+          "Helping organizations replace manual processes with connected digital workflows.",
+        image: "/img1.webp",
+      },
+      {
+        number: "05.",
+        title: "Training, Integration and Technical Support",
         description:
           "Helping organizations replace manual processes with connected digital workflows.",
         image: "/img1.webp",
@@ -125,7 +132,10 @@ export default function WhatWeDo() {
     filterGroups[0].capabilities
 
   return (
-    <section className="container-padding-x container py-12 md:py-16">
+    <section
+      id="what-we-do"
+      className="container-padding-x container py-12 md:py-16"
+    >
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
         {/* Left column — copy */}
         <div>
@@ -149,9 +159,9 @@ export default function WhatWeDo() {
           </div>
 
           <p className="mt-6 text-[15px] leading-relaxed text-gray-500">
-            ISAM Global connects businesses with practical, ready-to-deploy
-            software solutions and technology services designed to simplify
-            operations and improve business performance.
+            We connects businesses with practical, ready-to-deploy software
+            solutions and technology services designed to simplify operations
+            and improve business performance.
           </p>
 
           {/* <p className="mt-4 text-[15px] leading-relaxed text-gray-500">
