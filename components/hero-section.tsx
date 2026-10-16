@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react"
 import { Button } from "./ui/button"
 import Briefcase from "./icons/briefcase"
 import { TextAnimate } from "./ui/text-animate"
@@ -55,7 +54,7 @@ export default function HeroSection() {
           alt="hero image"
           width={1000}
           height={600}
-          className="absolute top-1/2 -right-10 bottom-0 w-full -translate-y-1/2"
+          className="absolute top-1/2 -right-3 bottom-0 w-full -translate-y-1/2 md:-right-10"
         />
         <Image
           src="/hero-float-c.png"

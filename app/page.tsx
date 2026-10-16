@@ -1,5 +1,4 @@
 import AboutSection from "@/components/about-section"
-import FaqSection from "@/components/faq-section"
 import FormSection from "@/components/form-section"
 import HeroSection from "@/components/hero-section"
 import OurCommitmentSection from "@/components/our-commitment-section"

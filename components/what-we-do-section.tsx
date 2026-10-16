@@ -33,34 +33,35 @@ const filterGroups: FilterGroup[] = [
         number: "01.",
         title: "IT Consulting and Software Advisory",
         description:
-          "Ready-to-deploy applications for specific business requirements.",
+          "Helping businesses identify and select the right software solutions aligned with their operational needs, business objectives and growth plans.",
         image: "/img1.webp",
       },
       {
         number: "02.",
         title: "Software Marketing and Distribution",
         description:
-          "Technology guidance and solution selection for organizations.",
+          "Connecting businesses with suitable software products and delivering technology solutions that address diverse industry requirements.",
         image: "/img1.webp",
       },
       {
         number: "03.",
         title: "Software Implementation and Deployment",
-        description: "Configuration, deployment, training and onboarding.",
+        description:
+          "Managing software installation, configuration and deployment to ensure smooth adoption and efficient business operations.",
         image: "/img1.webp",
       },
       {
         number: "04.",
         title: "Business Process Digitization",
         description:
-          "Helping organizations replace manual processes with connected digital workflows.",
+          "Helping organizations streamline workflows, automate routine processes and improve operational efficiency through digital technology.",
         image: "/img1.webp",
       },
       {
         number: "05.",
         title: "Training, Integration and Technical Support",
         description:
-          "Helping organizations replace manual processes with connected digital workflows.",
+          "Providing user training, system integration coordination and ongoing technical assistance to support reliable software performance and effective utilization.",
         image: "/img1.webp",
       },
     ],
