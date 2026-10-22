@@ -131,7 +131,7 @@ export default function Footer() {
                       </li>
                     ) : (
                       <li key={link.label}>
-                        <a
+                        <Link
                           href={link.href}
                           className={`inline-flex items-center gap-1.5 text-sm font-medium transition-colors ${
                             link.active
@@ -146,7 +146,7 @@ export default function Footer() {
                             />
                           )}
                           {link.label}
-                        </a>
+                        </Link>
                       </li>
                     )
                   )}

@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "../ui/button"
+import MenuSheet from "../menu-sheet"
 
 export default function Header() {
   return (
@@ -46,15 +47,19 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* CTA button */}
-        <Link href="#form-section">
-          <Button className="rounded-full font-semibold" size="lg">
-            Contact
-            <span className="flex items-center justify-center rounded-full bg-white p-1 text-primary">
-              <ArrowRight className="h-4 w-4" strokeWidth={2} />
-            </span>
-          </Button>
-        </Link>
+        <div className="flex items-center gap-3 md:hidden">
+          {/* CTA button */}
+          <Link href="#form-section">
+            <Button className="rounded-full font-semibold" size="lg">
+              Contact
+              <span className="flex items-center justify-center rounded-full bg-white p-1 text-primary">
+                <ArrowRight className="h-4 w-4" strokeWidth={2} />
+              </span>
+            </Button>
+          </Link>
+
+          <MenuSheet />
+        </div>
       </nav>
     </header>
   )
