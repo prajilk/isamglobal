@@ -54,7 +54,7 @@ export default function HeroSection() {
           alt="hero image"
           width={1000}
           height={600}
-          className="absolute top-1/2 -right-3 bottom-0 w-full -translate-y-1/2 md:-right-10"
+          className="absolute top-1/2 -right-3 bottom-0 w-full -translate-y-1/2 md:-right-5 lg:-right-10"
         />
         <Image
           src="/hero-float-c.png"

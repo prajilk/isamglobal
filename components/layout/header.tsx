@@ -39,17 +39,17 @@ export default function Header() {
             Services
           </Link>
           <Link
-            href="#form-section"
+            href="#what-we-do"
             className="cursor-pointer bg-transparent text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
           >
-            Contact
+            What we do
           </Link>
         </div>
 
         {/* CTA button */}
-        <Link href="#what-we-do">
+        <Link href="#form-section">
           <Button className="rounded-full font-semibold" size="lg">
-            What We do
+            Contact
             <span className="flex items-center justify-center rounded-full bg-white p-1 text-primary">
               <ArrowRight className="h-4 w-4" strokeWidth={2} />
             </span>
