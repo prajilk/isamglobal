@@ -47,7 +47,7 @@ export default function Header() {
           </Link>
         </div>
 
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex items-center gap-3">
           {/* CTA button */}
           <Link href="#form-section">
             <Button className="rounded-full font-semibold" size="lg">

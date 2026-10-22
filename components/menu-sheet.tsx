@@ -16,7 +16,7 @@ const MenuSheet = () => {
   const [open, setOpen] = useState(false)
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger>
+      <SheetTrigger className="md:hidden">
         <Menu />
       </SheetTrigger>
       <SheetContent>
