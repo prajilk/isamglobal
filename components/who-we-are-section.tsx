@@ -43,7 +43,7 @@ export default function WhoWeAreSection() {
             recommend the right technology, and deliver measurable value.
           </p>
 
-          <Link href="#form-section">
+          <Link href="#solutions-section">
             <Button className="mt-6 rounded-full" size="lg">
               Learn More
               <span className="flex items-center justify-center rounded-full bg-white p-1 text-primary">
@@ -75,7 +75,7 @@ export default function WhoWeAreSection() {
                   ))}
                 </div>
                 <span className="text-[15px] font-medium text-gray-900">
-                  (4,9/5)
+                  &#040;4.9/5&#041;
                 </span>
               </div>
               <p className="mt-1 text-center text-sm text-gray-500">

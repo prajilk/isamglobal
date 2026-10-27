@@ -22,34 +22,34 @@ export default function Header() {
         {/* Nav links */}
         <div className="hidden items-center gap-9 font-semibold md:flex">
           <Link
-            href="#hero-section"
+            href="/#hero-section"
             className="cursor-pointer bg-transparent text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
           >
             Home
           </Link>
           <Link
-            href="#about-section"
+            href="/#about-section"
             className="cursor-pointer bg-transparent text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
           >
             About
           </Link>
           <Link
-            href="#solutions-section"
+            href="/#solutions-section"
             className="cursor-pointer bg-transparent text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
           >
             Services
           </Link>
           <Link
-            href="#what-we-do"
+            href="/#what-we-do"
             className="cursor-pointer bg-transparent text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
           >
-            What we do
+            Solutions
           </Link>
         </div>
 
         <div className="flex items-center gap-3">
           {/* CTA button */}
-          <Link href="#form-section">
+          <Link href="/#form-section">
             <Button className="rounded-full font-semibold" size="lg">
               Contact
               <span className="flex items-center justify-center rounded-full bg-white p-1 text-primary">

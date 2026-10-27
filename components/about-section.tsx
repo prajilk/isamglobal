@@ -13,7 +13,7 @@ export default function AboutSection() {
   return (
     <section
       id="about-section"
-      className="container-padding-x container px-6 py-12 md:py-16 lg:px-10"
+      className="container-padding-x container px-6 py-10 md:py-0 lg:px-10"
     >
       <div className="grid items-start gap-3 md:grid-cols-3">
         {/* Badge */}

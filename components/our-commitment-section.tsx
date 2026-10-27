@@ -80,7 +80,7 @@ export default function OurCommitmentSection() {
   return (
     <section
       id="commitment-section"
-      className="container-padding-x container py-10 md:py-16"
+      className="container-padding-x container py-10 md:py-10"
     >
       <div className="rounded-[32px] bg-gray-50 p-5 sm:p-12">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">

@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function OurServicesSection() {
   return (
-    <section className="container-padding-x container py-10 md:py-16">
+    <section className="container-padding-x container py-10 md:py-0">
       {/* Heading */}
       <div className="flex flex-col items-center text-center">
         <span className="rounded-full border bg-white px-4 py-1.5 text-xs font-medium text-primary shadow-md">

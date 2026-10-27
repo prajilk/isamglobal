@@ -84,13 +84,15 @@ export default function OurSolutions() {
                 layoutId={`image-${active.title}-${id}`}
                 className="shrink-0 p-4"
               >
-                <Image
-                  width={200}
-                  height={200}
-                  src={active.src}
-                  alt={active.title}
-                  className="h-56 w-full rounded-lg object-cover object-center sm:h-80 lg:h-52"
-                />
+                {active.src && (
+                  <Image
+                    width={200}
+                    height={200}
+                    src={active.src}
+                    alt={active.title}
+                    className="h-56 w-full rounded-lg object-cover object-center sm:h-80 lg:h-52"
+                  />
+                )}
               </motion.div>
 
               <div className="flex min-h-0 flex-1 flex-col">
@@ -112,7 +114,7 @@ export default function OurSolutions() {
                       layoutId={`description-${active.description}-${id}`}
                       className="font-dm-sans text-sm"
                     >
-                      {active.description}
+                      {active.longDescription ?? active.description}
                     </motion.p>
                   </div>
                 </div>
@@ -128,7 +130,7 @@ export default function OurSolutions() {
                     className="flex scroll-fade scrollbar-thin scrollbar-thumb-gray-300 flex-wrap gap-2 overflow-y-scroll py-2 scroll-fade-[20%]"
                     data-lenis-prevent
                   >
-                    {active.tags.map((solution) => (
+                    {active.tags?.map((solution) => (
                       <li
                         className="h-fit rounded-full border border-black/40 px-3 py-1.5 text-sm text-black"
                         key={solution}
@@ -139,20 +141,25 @@ export default function OurSolutions() {
                   </ul>
 
                   <div className="flex justify-center py-4">
-                    <motion.a
-                      layout
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      href={active.link}
-                      target="_blank"
-                      className="inline-flex items-center gap-2 rounded-full bg-primary py-1 pr-1 pl-4 text-sm font-medium text-white transition-colors hover:bg-primary/90"
-                    >
-                      View Detail
-                      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-primary">
-                        <ArrowRight className="h-3.5 w-3.5" />
-                      </span>
-                    </motion.a>
+                    {active.link !== "#" && (
+                      <motion.a
+                        layout
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        href={active.link}
+                        target={
+                          active.link?.startsWith("#") ? "_self" : "_blank"
+                        }
+                        onClick={() => setActive(null)}
+                        className="inline-flex items-center gap-2 rounded-full bg-primary py-1 pr-1 pl-4 text-sm font-medium text-white transition-colors hover:bg-primary/90"
+                      >
+                        View Detail
+                        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-primary">
+                          <ArrowRight className="h-3.5 w-3.5" />
+                        </span>
+                      </motion.a>
+                    )}
                   </div>
                 </motion.div>
               </div>
@@ -201,6 +208,7 @@ function Card({
   id: string
   setActive: (card: (typeof cards)[0]) => void
 }) {
+  if (!card.title) return <div className="hidden lg:block"></div>
   return (
     <motion.div
       layoutId={`card-${card.title}-${id}`}
@@ -279,7 +287,7 @@ export const CloseIcon = () => {
 const cards = [
   {
     title: "THREDEX",
-    subHeading: "Apartments & Maintenance Management System",
+    subHeading: "Property & Facility Management",
     description:
       "A connected platform for managing properties, tenants, rentals, maintenance and daily operations in one place.",
     src: "/services/thredex.webp",
@@ -290,11 +298,11 @@ const cards = [
       "Maintenance",
       "Reports",
     ],
-    link: "#",
+    link: "https://thredex.com",
   },
   {
     title: "WRAPZOID",
-    subHeading: "Beauty & Appointment Management System",
+    subHeading: "Beauty & Wellness Booking",
     description:
       "A smart platform for managing beauty services, appointments, customers and daily salon operations with ease.",
     src: "/services/wrapzoid.webp",
@@ -305,11 +313,11 @@ const cards = [
       "Staff Management",
       "Reports",
     ],
-    link: "#",
+    link: "https://wrapzoid.com",
   },
   {
     title: "MEETADR",
-    subHeading: "Healthcare & Doctor Appointment System",
+    subHeading: "Healthcare Booking Platform",
     description:
       "A connected healthcare platform that simplifies doctor discovery, appointment scheduling and patient management.",
     src: "/services/meetadr.webp",
@@ -320,11 +328,11 @@ const cards = [
       "Schedules",
       "Reports",
     ],
-    link: "#",
+    link: "https://MeetAdr.com",
   },
   {
     title: "ETLAB",
-    subHeading: "Education & Learning Management System",
+    subHeading: "Healthcare Booking Platform",
     description:
       "A digital platform designed to simplify academic operations, student management, learning and institutional workflows.",
     src: "/services/etlab.webp",
@@ -335,13 +343,15 @@ const cards = [
       "Examinations",
       "Reports",
     ],
-    link: "#",
+    link: "#form-section",
   },
   {
     title: "PETROHSE",
-    subHeading: "Health, Safety & Environment Management System",
+    subHeading: "Software solution for Occupational Health and Safety",
     description:
       "A centralized platform for managing workplace safety, compliance, incidents and HSE operations across organizations.",
+    longDescription:
+      "PetroHSE software suite helps to streamline all aspects of the organization's environmental, health, security, and safety program by digitalizing data and workflows. The system is designed and tailored to meet organizational, departmental, and employees HSE-related requirements.",
     src: "/services/petrohse.webp",
     tags: [
       "Safety Management",
@@ -350,13 +360,15 @@ const cards = [
       "Compliance",
       "Reports",
     ],
-    link: "#",
+    link: "#form-section",
   },
   {
     title: "DIGIHR",
-    subHeading: "Human Resource Management System",
+    subHeading: "Digital Human Resource Management Tool",
     description:
       "A streamlined HR platform for managing employees, attendance, leave and everyday workforce operations.",
+    longDescription:
+      "DigiHR is a digital platform that allows an organization to manage key tasks and processes related to managing human resources. It is an intuitive and easy-to-use software solution for human resource management which is capable to track and monitor the time and attendance of employees at work.",
     src: "/services/digihr.webp",
     tags: [
       "Employee Management",
@@ -365,13 +377,15 @@ const cards = [
       "Payroll",
       "Reports",
     ],
-    link: "#",
+    link: "#form-section",
   },
   {
     title: "SAMS",
-    subHeading: "Smart Asset Management System",
+    subHeading: "Digital Solution for Managing Assets",
     description:
       "A centralized solution for tracking, managing and maintaining organizational assets throughout their lifecycle.",
+    longDescription:
+      "A digital tool that can be used to handle various types of assets within the organization. It is a      smart and intelligent software for managing and automating asset registration and tracking processes.",
     src: "/services/sams.webp",
     tags: [
       "Asset Tracking",
@@ -380,13 +394,15 @@ const cards = [
       "Inventory",
       "Reports",
     ],
-    link: "#",
+    link: "#form-section",
   },
   {
     title: "ZAYER",
-    subHeading: "Innovation Management Platform",
+    subHeading: "Innovative Visitor Management System",
     description:
       "A collaborative platform that helps organizations capture ideas, manage innovation initiatives and turn opportunities into outcomes.",
+    longDescription:
+      "ZAYER is a cutting-edge Visitor Management System (VMS) designed to transform how businesses manage visitor access, providing a seamless, secure, and highly efficient check-in experience.",
     src: "/services/zayer.webp",
     tags: [
       "Idea Management",
@@ -395,13 +411,16 @@ const cards = [
       "Workflow",
       "Analytics",
     ],
-    link: "#",
+    link: "#form-section",
   },
+  {},
   {
     title: "DIGILOGIST",
-    subHeading: "Delivery & Logistics Management System",
+    subHeading: "Exhaustive Delivery Management System",
     description:
       "A connected logistics platform for managing deliveries, routes, drivers and operations from one centralized system.",
+    longDescription:
+      "Digital solution is to track and automate the entire activities and process related to delivery management process. It is a complete software framework operating on domestic delivery services. It helps to automate various verticals related to a delivery process.",
     src: "/services/digilogist.webp",
     tags: [
       "Order Management",
@@ -410,7 +429,7 @@ const cards = [
       "Driver Management",
       "Reports",
     ],
-    link: "#",
+    link: "#form-section",
   },
   {
     title: "B-QUICK",
@@ -425,6 +444,7 @@ const cards = [
       "Purchasing",
       "Reports",
     ],
-    link: "#",
+    link: "#form-section",
   },
+  {},
 ]

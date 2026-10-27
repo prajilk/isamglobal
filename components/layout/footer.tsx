@@ -20,11 +20,10 @@ const columns: LinkColumn[] = [
   {
     title: "Quick Links",
     links: [
-      { label: "Home", href: "#hero-section" },
-      { label: "Solutions", href: "#solutions-section" },
-      { label: "About", href: "#about-section" },
-      { label: "Why ISAM", href: "#commitment-section" },
-      { label: "Book a Demo", href: "#form-section" },
+      { label: "Home", href: "/#hero-section" },
+      { label: "Solutions", href: "/#solutions-section" },
+      { label: "About", href: "/#about-section" },
+      { label: "Why ISAM", href: "/#commitment-section" },
     ],
   },
   {

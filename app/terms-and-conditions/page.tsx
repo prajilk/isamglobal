@@ -397,7 +397,7 @@ const TCPage = () => {
           </p>
           <address className="rounded-xl border border-slate-200 bg-slate-50 p-5 leading-7 not-italic">
             <p className="font-semibold text-slate-900">ISAM GLOBAL</p>
-            <p>Sharjah, United Arab Emirates</p>
+            <p>United Arab Emirates</p>
             <p>
               Email:{" "}
               <Link

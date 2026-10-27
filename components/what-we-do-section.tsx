@@ -135,7 +135,7 @@ export default function WhatWeDo() {
   return (
     <section
       id="what-we-do"
-      className="container-padding-x container py-12 md:py-16"
+      className="container-padding-x container py-10 md:py-0"
     >
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
         {/* Left column — copy */}
