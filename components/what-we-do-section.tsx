@@ -145,7 +145,7 @@ export default function WhatWeDo() {
             What We Do
           </span>
 
-          <div className="mt-6 font-jakarta-sans text-4xl leading-[110%] font-bold sm:text-5xl">
+          <div className="mt-6 font-jakarta-sans text-4xl leading-[110%] font-bold">
             <TextAnimate
               animation="blurIn"
               as="span"

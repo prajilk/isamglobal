@@ -179,7 +179,7 @@ export default function OurSolutions() {
           <TextAnimate
             animation="blurIn"
             as="h2"
-            className="mt-4 font-jakarta-sans text-4xl font-bold text-[#2B2B2B] sm:text-5xl"
+            className="mt-4 font-jakarta-sans text-4xl font-bold text-[#2B2B2B]"
           >
             Our Software Solutions
           </TextAnimate>

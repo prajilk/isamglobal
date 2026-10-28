@@ -94,7 +94,7 @@ export default function OurCommitmentSection() {
             <TextAnimate
               animation="blurIn"
               as="h2"
-              className="mt-4 max-w-xs font-jakarta-sans text-4xl leading-[110%] font-bold text-[#2B2B2B] sm:text-5xl"
+              className="mt-4 max-w-xs font-jakarta-sans text-4xl leading-[110%] font-bold text-[#2B2B2B]"
             >
               Technology You Can Trust
             </TextAnimate>

@@ -15,7 +15,7 @@ export default function AboutSection() {
       id="about-section"
       className="container-padding-x container px-6 py-10 md:py-0 lg:px-10"
     >
-      <div className="grid items-start gap-3 md:grid-cols-3">
+      <div className="grid items-start gap-3 md:grid-cols-5">
         {/* Badge */}
         <span className="mt-3 flex w-fit items-center gap-2 rounded-full bg-primary-foreground px-4 py-1.5 text-sm text-primary">
           <Avatar />
@@ -23,7 +23,7 @@ export default function AboutSection() {
         </span>
 
         {/* Heading */}
-        <h2 className="text-3xl leading-snug font-semibold text-gray-900 sm:text-4xl md:col-span-2">
+        <h2 className="text-3xl leading-tight font-semibold text-gray-900 sm:text-4xl md:col-span-4">
           Empowering businesses with innovative software solutions{" "}
           <video
             className="inline-flex h-10 w-20 items-center justify-center overflow-hidden rounded-full object-cover"

@@ -11,7 +11,7 @@ export default function OurServicesSection() {
           Our Service
         </span>
 
-        <h2 className="mt-4 max-w-3xl font-jakarta-sans text-4xl leading-[110%] font-bold text-[#2B2B2B] sm:text-5xl">
+        <h2 className="mt-4 max-w-3xl font-jakarta-sans text-4xl leading-[110%] font-bold text-[#2B2B2B]">
           <TextAnimate animation="blurIn" as="span">
             Comprehensive Solutions for
           </TextAnimate>{" "}

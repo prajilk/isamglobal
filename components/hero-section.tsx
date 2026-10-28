@@ -20,7 +20,7 @@ export default function HeroSection() {
         <TextAnimate
           animation="blurIn"
           as="h1"
-          className="mt-6 max-w-md font-jakarta-sans text-5xl leading-[1.1] font-extrabold text-primary"
+          className="mt-6 max-w-sm font-jakarta-sans text-[42px] leading-[1.1] font-extrabold text-primary"
         >
           Smart Software. Simple Business. Better Future.
         </TextAnimate>

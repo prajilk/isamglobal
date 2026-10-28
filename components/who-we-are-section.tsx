@@ -16,7 +16,7 @@ export default function WhoWeAreSection() {
             Who We Are
           </span>
 
-          <div className="mt-3 font-jakarta-sans text-4xl leading-[110%] font-bold text-[#2B2B2B] sm:text-5xl">
+          <div className="mt-3 font-jakarta-sans text-4xl leading-[110%] font-bold text-[#2B2B2B]">
             <TextAnimate animation="blurIn" as="span">
               Technology that makes
             </TextAnimate>
