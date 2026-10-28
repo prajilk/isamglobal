@@ -332,7 +332,7 @@ const cards = [
   },
   {
     title: "ETLAB",
-    subHeading: "Healthcare Booking Platform",
+    subHeading: "Education & Campus Management",
     description:
       "A digital platform designed to simplify academic operations, student management, learning and institutional workflows.",
     src: "/services/etlab.webp",
