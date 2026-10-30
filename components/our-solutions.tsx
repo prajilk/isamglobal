@@ -169,6 +169,9 @@ export default function OurSolutions() {
       </AnimatePresence>
       <section
         id="solutions-section"
+        style={{
+          scrollMarginTop: "40px",
+        }}
         className="container-padding-x container pt-12 pb-5 md:pt-16 md:pb-0"
       >
         <div className="mb-10 flex flex-col items-center text-center">
@@ -308,9 +311,10 @@ const cards = [
     src: "/services/wrapzoid.webp",
     tags: [
       "Appointment Booking",
-      "Customer Management",
+      "Salon Discovery",
       "Service Management",
-      "Staff Management",
+      "Customer Management",
+      "E-commerce",
       "Reports",
     ],
     link: "https://wrapzoid.com",
@@ -322,8 +326,9 @@ const cards = [
       "A connected healthcare platform that simplifies doctor discovery, appointment scheduling and patient management.",
     src: "/services/meetadr.webp",
     tags: [
-      "Doctor Management",
-      "Appointments",
+      "Healthcare & Doctor Booking Platform",
+      "Doctor Discovery",
+      "Online Appointment Booking",
       "Patient Management",
       "Schedules",
       "Reports",
@@ -339,7 +344,9 @@ const cards = [
     tags: [
       "Student Management",
       "Course Management",
-      "Attendance",
+      "Administration Management",
+      "Teachers Management",
+      "Parents management",
       "Examinations",
       "Reports",
     ],
@@ -405,11 +412,10 @@ const cards = [
       "ZAYER is a cutting-edge Visitor Management System (VMS) designed to transform how businesses manage visitor access, providing a seamless, secure, and highly efficient check-in experience.",
     src: "/services/zayer.webp",
     tags: [
-      "Idea Management",
-      "Innovation Hub",
-      "Collaboration",
-      "Workflow",
-      "Analytics",
+      "Visitors Management",
+      "Access Control Management",
+      "Schedule Management",
+      "Workplace Digital Security Management",
     ],
     link: "#form-section",
   },
@@ -442,6 +448,8 @@ const cards = [
       "Warehouse",
       "Sales Management",
       "Purchasing",
+      "POS system",
+      "Van Sales Module",
       "Reports",
     ],
     link: "#form-section",

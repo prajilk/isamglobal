@@ -45,7 +45,13 @@ export default function FormSection() {
   }
 
   return (
-    <section className="bg-[#FAFAFA] py-10 md:py-16" id="form-section">
+    <section
+      className="bg-[#FAFAFA] py-10 md:py-16"
+      id="form-section"
+      style={{
+        scrollMarginTop: "40px",
+      }}
+    >
       <div className="container-padding-x container grid gap-10 lg:grid-cols-2">
         {/* Left column — copy */}
         <div>

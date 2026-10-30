@@ -43,7 +43,7 @@ export default function WhoWeAreSection() {
             recommend the right technology, and deliver measurable value.
           </p>
 
-          <Link href="#solutions-section">
+          <Link href="/#solutions-section">
             <Button className="mt-6 rounded-full" size="lg">
               Learn More
               <span className="flex items-center justify-center rounded-full bg-white p-1 text-primary">

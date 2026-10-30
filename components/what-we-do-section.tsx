@@ -135,6 +135,9 @@ export default function WhatWeDo() {
   return (
     <section
       id="what-we-do"
+      style={{
+        scrollMarginTop: "90px",
+      }}
       className="container-padding-x container py-10 md:py-0"
     >
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
@@ -182,7 +185,7 @@ export default function WhatWeDo() {
             value.
           </p> */}
 
-          <Link href="#solutions-section">
+          <Link href="/#solutions-section">
             <Button
               size="lg"
               className="mt-8 h-auto! rounded-full py-2 pr-2 pl-6 text-[15px] font-medium"

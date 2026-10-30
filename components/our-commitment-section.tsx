@@ -28,7 +28,7 @@ const commitments: Commitment[] = [
     icon: Lightbulb,
     title: "Innovation",
     description:
-      "We continuously improve our products and explore new technologies to keep our customers ahead.",
+      "We continuously improve our products and explore emerging technologies to keep our customers ahead.",
   },
   {
     id: "quality",
@@ -80,6 +80,9 @@ export default function OurCommitmentSection() {
   return (
     <section
       id="commitment-section"
+      style={{
+        scrollMarginTop: "60px",
+      }}
       className="container-padding-x container py-10 md:py-10"
     >
       <div className="rounded-[32px] bg-gray-50 p-5 sm:p-12">

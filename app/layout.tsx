@@ -40,7 +40,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <Link
-            href="#hero-section"
+            href="/#hero-section"
             className="fixed right-6 bottom-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-primary p-1 text-white"
           >
             <ArrowUp className="size-5" strokeWidth={2} />

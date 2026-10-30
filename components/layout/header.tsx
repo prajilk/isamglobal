@@ -15,12 +15,12 @@ export default function Header() {
             alt="Logo"
             width={100}
             height={100}
-            className="size-10"
+            className="size-12"
           />
         </Link>
 
         {/* Nav links */}
-        <div className="hidden items-center gap-9 font-semibold md:flex">
+        <div className="hidden items-center gap-9 text-lg font-semibold md:flex">
           <Link
             href="/#hero-section"
             className="cursor-pointer bg-transparent text-gray-700 transition-colors hover:bg-transparent hover:text-gray-900"
@@ -49,7 +49,7 @@ export default function Header() {
 
         <div className="flex items-center gap-3">
           {/* CTA button */}
-          <Link href="/#form-section">
+          <Link href="/#form-section" className="hidden md:block">
             <Button className="rounded-full font-semibold" size="lg">
               Contact
               <span className="flex items-center justify-center rounded-full bg-white p-1 text-primary">

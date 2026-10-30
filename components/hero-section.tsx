@@ -12,7 +12,7 @@ export default function HeroSection() {
     >
       {/* Left column */}
       <div>
-        <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-4 py-1.5 text-sm text-gray-700">
+        <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-4 py-1.5 text-gray-700">
           <Briefcase />
           Welcome to ISAM Global
         </span>
@@ -40,7 +40,7 @@ export default function HeroSection() {
               </span>
             </Button>
           </Link> */}
-          <Link href="#about-section">
+          <Link href="/#about-section">
             <Button size="lg" className="rounded-full" variant="outline">
               Learn More
             </Button>
